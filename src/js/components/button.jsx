@@ -2,10 +2,10 @@ var React = require('react');
 
 var Button = React.createClass({
   propTypes: {
-    href: React.PropTypes.string.isRequired,
-    size: React.PropTypes.string.isRequired,
-    type: React.PropTypes.string.isRequired,
-    content: React.PropTypes.string.isRequired
+    href:     React.PropTypes.string.isRequired,
+    size:     React.PropTypes.string.isRequired,
+    type:     React.PropTypes.string.isRequired,
+    content:  React.PropTypes.string.isRequired
   },
 
   render: function () {

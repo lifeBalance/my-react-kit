@@ -2,8 +2,8 @@ var React = require('react');
 
 var Alert = React.createClass({
   propTypes: {
-    message: React.PropTypes.string.isRequired,
-    type: React.PropTypes.string.isRequired
+    message:  React.PropTypes.string.isRequired,
+    type:     React.PropTypes.string.isRequired
   },
   render: function () {
     return (
