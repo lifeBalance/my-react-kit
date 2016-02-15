@@ -7,6 +7,7 @@ var Alert   = require('./alert');
 // A top level component.
 var Foo = React.createClass({
   render: function() {
+    console.log('Testing Sourcemaps...'); // Delete me when finished.
     return (
       <div className='container'>
         <div className="jumbotron">

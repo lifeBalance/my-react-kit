@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "gulp"
+    "start": "gulp",
+    "dev": "nodemon dist/server.js"
   },
   "keywords": [],
   "author": "",
@@ -16,15 +17,19 @@
     "browser-sync": "^2.11.1",
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^3.1.0",
+    "gulp-nodemon": "^2.0.6",
     "gulp-sass": "^2.2.0",
     "gulp-sourcemaps": "^1.6.0",
     "gulp-util": "^3.0.7",
+    "require-dir": "^0.3.0",
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0",
     "watchify": "^3.7.0"
   },
   "dependencies": {
     "bootstrap-sass": "^3.3.6",
+    "express": "^4.13.4",
+    "jade": "^1.11.0",
     "flux": "^2.1.1",
     "jquery": "^2.2.0",
     "react": "^0.14.7",
