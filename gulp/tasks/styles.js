@@ -13,5 +13,5 @@ gulp.task('styles', function () {
   .pipe(sass().on('error', sass.logError))
   .pipe(sourcemaps.write('../maps'))
   .pipe(gulp.dest(config.destination))
-  .pipe(browserSync.stream());
+  .pipe(browserSync.stream({match: '**/*.css'}));
 });
