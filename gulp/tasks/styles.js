@@ -3,6 +3,7 @@ var sourcemaps  = require('gulp-sourcemaps');
 var sass        = require('gulp-sass');
 var config      = require('../config').styles;
 var autoprefixer  = require('gulp-autoprefixer');
+var browserSync = require('browser-sync').get('browSync');
 
 
 gulp.task('styles', function () {
@@ -11,5 +12,6 @@ gulp.task('styles', function () {
   .pipe(autoprefixer())
   .pipe(sass().on('error', sass.logError))
   .pipe(sourcemaps.write('../maps'))
-  .pipe(gulp.dest(config.destination));
+  .pipe(gulp.dest(config.destination))
+  .pipe(browserSync.stream());
 });

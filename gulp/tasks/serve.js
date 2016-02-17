@@ -1,5 +1,9 @@
 var gulp        = require('gulp');
+
 var browserSync = require('browser-sync').create('browSync');
+// Above we have created a Browsersync instance named `browSync`,
+// so we can retrieve it later from another file using `.get('browSync')`
+
 var reload      = browserSync.reload;
 var nodemon     = require('gulp-nodemon');
 var config      = require('../config');
@@ -18,7 +22,7 @@ gulp.task('nodemon', function (cb) {
   return nodemon({
     script: 'dist/server.js',
     ignore: [
-      '../../gulpfile.js',
+      'gulpfile.js',
       'node_modules/',
       config.scripts.sources
     ]
