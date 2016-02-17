@@ -12,7 +12,7 @@ gulp.task('serve', ['nodemon'], function() {
   browserSync.init({
     open: false,
     proxy: config.serve.express,
-    port: config.serve.port,  // Where we should point our browser ;)
+    port: config.serve.port,  // Where we should point our browser (8080)
     notify: true
   });
 });
