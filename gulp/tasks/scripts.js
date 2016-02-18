@@ -7,6 +7,7 @@ var buffer      = require('vinyl-buffer');
 var sourcemaps  = require('gulp-sourcemaps');
 var gutil       = require('gulp-util');
 var config      = require('../config').scripts;
+var serve       = require('./serve'); // The file where I created 'browSync'
 var browserSync = require('browser-sync').get('browSync');
 
 
