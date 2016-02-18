@@ -7,6 +7,7 @@ var buffer      = require('vinyl-buffer');
 var sourcemaps  = require('gulp-sourcemaps');
 var gutil       = require('gulp-util');
 var config      = require('../config').scripts;
+var browserSync = require('browser-sync').get('browSync');
 
 
 gulp.task('scripts', function () {
@@ -41,7 +42,8 @@ gulp.task('scripts', function () {
       .pipe(buffer())
       .pipe(sourcemaps.init({loadMaps: true}))
       .pipe(sourcemaps.write('../maps'))
-      .pipe(gulp.dest(config.destination));
+      .pipe(gulp.dest(config.destination))
+      .pipe(browserSync.stream({once: true}));
   }
 
   bundle(); // We have to call bundle() to get `update' events.
