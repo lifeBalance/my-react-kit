@@ -21,11 +21,11 @@ gulp.task('nodemon', function (cb) {
   var called = false;
   return nodemon({
     script: 'dist/server.js',
-    ignore: [
-      'gulpfile.js',
-      'node_modules/',
-      config.scripts.sources
-    ]
+    watch: [
+      'dist/server.js',
+      'dist/views/'
+    ],
+    ext: 'js jade'
   })
   .on('start', function () {
     if (!called) {
