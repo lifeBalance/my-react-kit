@@ -20,10 +20,10 @@ gulp.task('serve', ['nodemon'], function() {
 gulp.task('nodemon', function (cb) {
   var called = false;
   return nodemon({
-    script: 'dist/server.js',
+    script: 'dist/express/server.js',
     watch: [
-      'dist/server.js',
-      'dist/views/'
+      'dist/express/server.js',
+      'dist/express/views/'
     ],
     ext: 'js jade'
   })
