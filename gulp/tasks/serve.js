@@ -23,7 +23,8 @@ gulp.task('nodemon', function (cb) {
     script: 'dist/express/server.js',
     watch: [
       'dist/express/server.js',
-      'dist/express/views/'
+      'dist/express/views/',
+      'dist/express/routes/'
     ],
     ext: 'js jade'
   })

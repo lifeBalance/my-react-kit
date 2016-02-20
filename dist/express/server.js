@@ -10,7 +10,7 @@ app.set('views', path.join(__dirname + '/views'));
 // Static Files middleware
 app.use(express.static(path.join(__dirname + '/../public')));
 
-app.get('*', function (req, res) {
+app.get('/', function (req, res) {
   res.render('index');
 });
 
@@ -19,3 +19,6 @@ var server = app.listen(3000, function () {
   console.log('Listening on http://localhost:' + server.address().port);
   console.log("Hit 'Ctrl + C' to stop the server");
 });
+
+// Route for testing an API
+require('./routes/api.js')(app);
